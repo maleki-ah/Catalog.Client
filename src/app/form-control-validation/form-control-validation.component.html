@@ -86,13 +86,13 @@
     </fieldset>
   </div>
 
-  <button type="submit">Save</button>
-  <button type="reset">Clear</button>
+  <button class="btn btn-dark" type="submit">Save</button>
+  <button class="btn btn-dark" type="reset">Clear</button>
 </form>
 
 <fieldset *ngIf="isSaved">
   <legend>Profile</legend>
   <div>First Name: {{ firstName }}</div>
   <div>Last Name: {{ lastName }}</div>
-  <button (click)="newProfile()">New Profile</button>
+  <button class="btn btn-dark" (click)="newProfile()">New Profile</button>
 </fieldset>

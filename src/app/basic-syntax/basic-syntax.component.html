@@ -6,8 +6,8 @@
 <!-- Text Interpolation -->
 <p>{{ title }}</p>
 
-<button title="Test">Sample</button>
-<button title="{{ btnTitle }}">Sample2</button>
+<button class="btn btn-dark" title="Test">Sample</button>
+<button class="btn btn-dark" title="{{ btnTitle }}">Sample2</button>
 
 <input type="text" value="{{ txtValue }}" />
 
@@ -20,8 +20,8 @@
 </fieldset>
 
 <!-- Attribute Binding -->
-<button [title]="btnTitle">Other</button>
-<button [title]="fullName">Other</button>
+<button class="btn btn-dark" [title]="btnTitle">Other</button>
+<button class="btn btn-dark" [title]="fullName">Other</button>
 
 <p [style.color]="foreColor">Sample</p>
 <p [style.background-color]="bgColor">Sample1</p>
@@ -36,5 +36,5 @@
 </p>
 
 <!-- Event Binding -->
-<button (click)="ok()">OK</button>
-<button (click)="cancel()">Cancel</button>
+<button class="btn btn-dark" (click)="ok()">OK</button>
+<button class="btn btn-dark" (click)="cancel()">Cancel</button>

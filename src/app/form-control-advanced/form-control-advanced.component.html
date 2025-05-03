@@ -12,12 +12,12 @@
     <input type="text" name="lastName" [(ngModel)]="lastName" />
   </div>
 
-  <button (click)="saveForm(profileForm)">Save</button>
+  <button class="btn btn-dark" (click)="saveForm(profileForm)">Save</button>
 </form>
 
 <fieldset *ngIf="isSaved">
   <legend>Profile</legend>
   <div>First Name: {{ firstName }}</div>
   <div>Last Name: {{ lastName }}</div>
-  <button (click)="newProfile()">New Profile</button>
+  <button class="btn btn-dark" (click)="newProfile()">New Profile</button>
 </fieldset>
