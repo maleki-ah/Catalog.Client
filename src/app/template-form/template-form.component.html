@@ -1,0 +1,13 @@
+<p>template-form works!</p>
+
+<div>
+  <label for="">Data</label>
+  <br />
+  <!-- Template Reference -->
+  <input type="text" #myData />
+</div>
+
+<button (click)="save(myData.value)">Save</button>
+<button (click)="saveElement(myData)">SaveElement</button>
+
+<p>Data : {{ data }}</p>

@@ -1,0 +1,98 @@
+<p>form-control-validation works!</p>
+
+<form #profileForm="ngForm" *ngIf="!isSaved" (ngSubmit)="saveForm(profileForm)">
+  <div>
+    <label for="">FirstName: </label>
+    <br />
+    <input
+      type="text"
+      name="firstName"
+      required
+      minlength="3"
+      pattern="^[0-9]*$"
+      #myFirstName="ngModel"
+      [(ngModel)]="firstName"
+    />
+  </div>
+  <div *ngIf="myFirstName.invalid">
+    <p class="error">First Name is invalid.</p>
+    <fieldset>
+      <legend>Error</legend>
+      <div>
+        <p *ngIf="myFirstName.hasError('required')">
+          First Name is a required filed.
+        </p>
+      </div>
+      <div>
+        <p *ngIf="myFirstName.hasError('minlength')">
+          First Name should be higher than 3 chars length.
+        </p>
+      </div>
+      <div>
+        <p *ngIf="myFirstName.hasError('pattern')">
+          First Name pattern is failed.
+        </p>
+      </div>
+    </fieldset>
+  </div>
+  <div>
+    <fieldset>
+      <legend>First Name Status</legend>
+      <div>Touched: {{ myFirstName.touched }}</div>
+      <div>Untouched: {{ myFirstName.untouched }}</div>
+      <div>Pristine: {{ myFirstName.pristine }}</div>
+      <div>Dirty: {{ myFirstName.dirty }}</div>
+      <div>Valid: {{ myFirstName.valid }}</div>
+      <div>Invalid: {{ myFirstName.invalid }}</div>
+    </fieldset>
+  </div>
+  <div>
+    <label for="">LastName: </label>
+    <br />
+    <input
+      type="text"
+      name="lastName"
+      required
+      minlength="3"
+      #myLastName="ngModel"
+      [(ngModel)]="lastName"
+    />
+  </div>
+  <div *ngIf="myLastName.invalid">
+    <p class="error">Last Name is invalid.</p>
+    <fieldset>
+      <legend>Error</legend>
+      <div>
+        <p *ngIf="myLastName.hasError('required')">
+          Last Name is a required filed.
+        </p>
+      </div>
+      <div>
+        <p *ngIf="myLastName.hasError('minlength')">
+          Last Name should be higher than 3 chars length.
+        </p>
+      </div>
+    </fieldset>
+  </div>
+  <div>
+    <fieldset>
+      <legend>Last Name Status</legend>
+      <div>Touched: {{ myLastName.touched }}</div>
+      <div>Untouched: {{ myLastName.untouched }}</div>
+      <div>Pristine: {{ myLastName.pristine }}</div>
+      <div>Dirty: {{ myLastName.dirty }}</div>
+      <div>Valid: {{ myLastName.valid }}</div>
+      <div>Invalid: {{ myLastName.invalid }}</div>
+    </fieldset>
+  </div>
+
+  <button type="submit">Save</button>
+  <button type="reset">Clear</button>
+</form>
+
+<fieldset *ngIf="isSaved">
+  <legend>Profile</legend>
+  <div>First Name: {{ firstName }}</div>
+  <div>Last Name: {{ lastName }}</div>
+  <button (click)="newProfile()">New Profile</button>
+</fieldset>

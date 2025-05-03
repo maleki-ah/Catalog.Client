@@ -1,0 +1,40 @@
+<p class="c1">basic-syntax works!</p>
+<p class="c2">basic-syntax works!</p>
+
+<h1 class="c1">Sample Head</h1>
+
+<!-- Text Interpolation -->
+<p>{{ title }}</p>
+
+<button title="Test">Sample</button>
+<button title="{{ btnTitle }}">Sample2</button>
+
+<input type="text" value="{{ txtValue }}" />
+
+<fieldset>
+  <legend>Person Info</legend>
+  <p>FirstName: "{{ firstName }}"</p>
+  <p>LastName: "{{ lastName }}"</p>
+  <p>FullName: "{{ firstName }} {{ lastName }}"</p>
+  <p>FullName: "{{ fullName }}"</p>
+</fieldset>
+
+<!-- Attribute Binding -->
+<button [title]="btnTitle">Other</button>
+<button [title]="fullName">Other</button>
+
+<p [style.color]="foreColor">Sample</p>
+<p [style.background-color]="bgColor">Sample1</p>
+<p [style.backgroundColor]="bgColor">Sample1</p>
+<p
+  [style]="{
+    color: bgColor,
+    backgroundColor: foreColor
+  }"
+>
+  Sample1
+</p>
+
+<!-- Event Binding -->
+<button (click)="ok()">OK</button>
+<button (click)="cancel()">Cancel</button>

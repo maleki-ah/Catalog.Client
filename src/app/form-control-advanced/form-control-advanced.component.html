@@ -1,0 +1,23 @@
+<p>form-control-advanced works!</p>
+
+<form #profileForm="ngForm" *ngIf="!isSaved">
+  <div>
+    <label for="">FirstName: </label>
+    <br />
+    <input type="text" name="firstName" [(ngModel)]="firstName" />
+  </div>
+  <div>
+    <label for="">LastName: </label>
+    <br />
+    <input type="text" name="lastName" [(ngModel)]="lastName" />
+  </div>
+
+  <button (click)="saveForm(profileForm)">Save</button>
+</form>
+
+<fieldset *ngIf="isSaved">
+  <legend>Profile</legend>
+  <div>First Name: {{ firstName }}</div>
+  <div>Last Name: {{ lastName }}</div>
+  <button (click)="newProfile()">New Profile</button>
+</fieldset>
