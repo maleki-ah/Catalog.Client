@@ -1,10 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
-
-@import "bootstrap/dist/css/bootstrap.min.css";
+//! Basic Project - @import "bootstrap/dist/css/bootstrap.min.css";
 
 body {
-  margin: 5% 10%;
-  font-family: system-ui, -apple-system, sans-serif;
+  margin: 2% 5%;
+  height: 100%;
+  font-family: Roboto, system-ui, -apple-system, sans-serif;
 }
 
 .btn {

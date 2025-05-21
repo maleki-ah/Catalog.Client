@@ -1,0 +1,27 @@
+.app-footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  background-color: #ff4e4e;
+  box-shadow: 0 -2px 8px rgba(63, 30, 30, 0.1);
+  border-radius: 20px 20px 0 0;
+  z-index: 10;
+
+  .footer-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .footer-icon {
+    font-size: 18px;
+  }
+}

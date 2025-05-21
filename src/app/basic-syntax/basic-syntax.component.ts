@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   templateUrl: './basic-syntax.component.html',
   styleUrls: ['./basic-syntax.component.scss']
 })
+
 export class BasicSyntaxComponent {
   title = 'Catalog.Client';
   btnTitle: string = 'Catalog.Client';

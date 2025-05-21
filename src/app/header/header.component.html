@@ -1,0 +1,36 @@
+<mat-toolbar color="accent" class="app-toolbar">
+  <button mat-icon-button aria-label="Toggle menu" class="toolbar-button">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <a class="app-title" routerLink="/" routerLinkActive="active">CRUD App</a>
+
+  <button
+    mat-raised-button
+    class="product-button"
+    routerLink="/product-list"
+    routerLinkActive="active"
+  >
+    [ Product List ]
+  </button>
+
+  <span class="spacer"></span>
+
+  <button
+    mat-icon-button
+    aria-label="Add to favorites"
+    matTooltip="Favorite"
+    class="toolbar-button"
+  >
+    <mat-icon>favorite</mat-icon>
+  </button>
+
+  <button
+    mat-icon-button
+    aria-label="Share"
+    matTooltip="Share"
+    class="toolbar-button"
+  >
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
